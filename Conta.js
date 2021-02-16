@@ -6,7 +6,11 @@ export class Conta {
   }
 
   sacar(valor) {
-    let taxa = 1.1;
+    let taxa = 1;
+    this._sacarComTaxa(taxa, valor);
+  }
+
+  _sacarComTaxa(taxa, valor) {
     const valorASacar = valor * taxa;
     if (this._saldo >= valorASacar) {
       this._saldo -= valorASacar;

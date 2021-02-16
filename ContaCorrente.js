@@ -7,11 +7,6 @@ export class ContaCorrente extends Conta {
   }
 
   sacar(valor) {
-    let taxa = 1.0;
-    const valorASacar = valor * taxa;
-    if (this._saldo >= valorASacar) {
-      this._saldo -= valorASacar;
-      return valorASacar;
-    }
+    this._sacarComTaxa(1, valor);
   }
 }
